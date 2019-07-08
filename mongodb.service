@@ -1,0 +1,11 @@
+[Unit]
+Description=Mongodb
+
+[Service]
+User=mongodbadm
+
+WorkingDirectory=/home/mongodb
+ExecStart=/usr/bin/node /home/mongodbadm/TeamAPoolProjectBackend/Index.js
+
+[Install]
+WantedBy=multi-user.target
