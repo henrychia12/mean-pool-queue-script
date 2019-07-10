@@ -2,10 +2,10 @@
 Description=Mongodb
 
 [Service]
-User=mongodbadm
+User=meanadm
 
-WorkingDirectory=/home/mongodb
-ExecStart=/usr/bin/node /home/mongodbadm/TeamAPoolProjectBackend/Index.js
+WorkingDirectory=/home/meanadm/TeamAPoolProjectBackend
+ExecStart=/usr/bin/node /home/meanadm/TeamAPoolProjectBackend/Index.js
 
 [Install]
 WantedBy=multi-user.target

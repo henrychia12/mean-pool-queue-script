@@ -1,0 +1,11 @@
+[Unit]
+Description=Angular
+
+[Service]
+User=meanadm
+
+WorkingDirectory=/home/meanadm/TeamAPoolProjectUI
+ExecStart=/usr/bin/ng serve --host 0.0.0.0
+
+[Install]
+WantedBy=multi-user.target
