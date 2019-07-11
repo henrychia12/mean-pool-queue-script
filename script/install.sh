@@ -13,10 +13,10 @@ sudo apt-get install nodejs -y
 sudo useradd --create-home meanadm
 sudo usermod --shell /bin/bash meanadm
 
-# briefly carries a task on user - meanadm to git clone backend repo
+# briefly carries a task on user - meanadm to git clone front & back end repo
 sudo su - meanadm -c "git clone -b Developer https://github.com/Nboaram/TeamAPoolProjectBackend.git && git clone -b Developer https://github.com/Nboaram/TeamAPoolProjectUI.git"
 
-# install npm dependencies as meanadm in front/back end repo
+# install npm dependencies as meanadm in front & back end repo
 sudo su - meanadm -c "cd TeamAPoolProjectBackend && npm install"
 sudo su - meanadm -c "cd TeamAPoolProjectUI && npm install"
 
