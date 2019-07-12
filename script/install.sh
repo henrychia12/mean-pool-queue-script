@@ -23,15 +23,15 @@ sudo su - meanadm -c "cd TeamAPoolProjectUI && npm install"
 # installing angular globally
 yes | sudo npm -g install @angular/cli
 
-# delete mongodb and angular service file if already exists
-sudo rm -f /etc/systemd/system/mongodb.service
+# delete express and angular service file if already exists
+sudo rm -f /etc/systemd/system/express.service
 sudo rm -f /etc/systemd/system/angular.service
 
-# copy mongodb and angular service file to systemd
-sudo cp ../mongodb.service /etc/systemd/system
+# copy express and angular service file to systemd
+sudo cp ../express.service /etc/systemd/system
 sudo cp ../angular.service /etc/systemd/system
 
-# new service files added. systemd reload required to start angular and mongodb
+# new service files added. systemd reload required to start angular and express
 sudo systemctl daemon-reload
 sudo systemctl restart angular
-sudo systemctl restart mongodb
+sudo systemctl restart express
