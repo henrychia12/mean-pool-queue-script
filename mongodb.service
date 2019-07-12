@@ -1,5 +1,5 @@
 [Unit]
-Description=Mongodb
+Description=Express
 
 [Service]
 User=meanadm
