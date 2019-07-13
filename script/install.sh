@@ -18,10 +18,10 @@ sudo su - meanadm -c "git clone -b Developer https://github.com/Nboaram/TeamAPoo
 
 # install npm dependencies as meanadm in front/back end repo
 sudo su - meanadm -c "cd TeamAPoolProjectBackend && npm install"
-sudo su - meanadm -c "cd TeamAPoolProjectUI && npm install"
+sudo su - meanadm -c "cd TeamAPoolProjectUI && NG_CLI_ANALYTICS=ci npm install"
 
 # installing angular globally
-yes | sudo npm -g install @angular/cli
+sudo NG_CLI_ANALYTICS=ci npm -g install @angular/cli
 
 # delete express and angular service file if already exists
 sudo rm -f /etc/systemd/system/express.service
